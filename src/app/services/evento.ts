@@ -40,8 +40,8 @@ export class EventoService {
   adicionarProduto(eventoId: number, produto: any): Observable<any> {
     const body = {
       nome: produto.nome,
-      quantidadeInicial: produto.quantidade,
-      valorProduto: produto.precoVenda,
+      quantidadeInicial: produto.quantidadeInicial,
+      valorProduto: produto.valorProduto,
       eventoId
     };
     return this.http.post(`${this.baseUrl}/produto`, body);
